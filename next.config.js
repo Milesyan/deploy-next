@@ -15,6 +15,16 @@ const nextConfig = {
   output: 'export',
   assetPrefix: assetPrefix,
   basePath: basePath,
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'otterapp-assets-frontend-bucket.oss-cn-shanghai.aliyuncs.com',
+        port: '',
+        pathname: '/remote-content/**',
+      },
+    ],
+  },
 }
 
 module.exports = nextConfig
